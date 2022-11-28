@@ -274,3 +274,19 @@ if(GambarSaatLoading){
         loading.style.display = "none"
     
     });
+
+    // Sosmed
+for(let i = 0; i < Link.length; i++){
+    pushToSosmed(Link[i].link, i, Link[i].LogoSVG, Link[i].nama.toLowerCase());
+}
+    function pushToSosmed(link, u, svg, nama){
+        
+        let sosmed = document.querySelector(".sosmed");
+        if(Link[u].nama && Link[u].LogoSVG){
+            sosmed.innerHTML += `<a href="${link}" id="${nama}" class="${nama}">${svg}</a>`
+            
+        } else{
+            
+        }
+    }
+

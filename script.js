@@ -279,12 +279,21 @@ if(GambarSaatLoading){
 for(let i = 0; i < Link.length; i++){
     pushToSosmed(Link[i].link, i, Link[i].LogoSVG, Link[i].nama.toLowerCase());
 }
-    function pushToSosmed(link, u, svg, nama){
+    function pushToSosmed(linkk, u, svg, nama){
         
         let sosmed = document.querySelector(".sosmed");
         if(Link[u].nama && Link[u].LogoSVG){
-            sosmed.innerHTML += `<a href="${link}" id="${nama}" class="${nama}">${svg}</a>`
-            
+            if(Link[u].link){
+                sosmed.innerHTML += `<a href="${linkk}" id="${nama}" class="${nama}">${svg}</a>`
+            } else{
+                sosmed.innerHTML += `<a href="#" id="${nama}" class="${nama}">${svg}</a>`
+            }
+            if(Link[u].warnaHover){
+                document.getElementById("cssHover").innerHTML += `.sosmed #${nama}:hover{color: ${Link[u].warnaHover.toLowerCase()};} .sosmed #${nama}{margin-left: ${Link[u].margin_left}; margin-right: ${Link[u].margin_right};}`
+                
+            } else{
+                document.getElementById("cssHover").innerHTML += `.sosmed #${nama}:hover{color: blue;} .sosmed #${nama}{margin-left: ${Link[u].margin_left}; margin-right: ${Link[u].margin_right};}`
+            }
         } else{
             
         }

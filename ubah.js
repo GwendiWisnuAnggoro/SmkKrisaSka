@@ -192,24 +192,40 @@ const Jurusan =
 
 ]
 // urut sesuai jurusan
-const Jurusan_href = [
-    {
-        href: ""
-    },
-    {
-        href: ""
-    },
-    {
-        href: ""
-    },
-    {
-        href: ""
-    },
-    {
-        href: ""
-    }
-]
-
+// const Jurusan_href = [
+//     {
+//         href: ""
+//     },
+//     {
+//         href: ""
+//     },
+//     {
+//         href: ""
+//     },
+//     {
+//         href: ""
+//     },
+//     {
+//         href: ""
+//     }
+// ]
+// const Jurusan_Keterangan = [
+//     {
+//         keterangan: ""
+//     },
+//     {
+//         keterangan: ""
+//     },
+//     {
+//         keterangan: ""
+//     },
+//     {
+//         keterangan: ""
+//     },
+//     {
+//         keterangan: ""
+//     }
+// ]
 
 // Alamat //No Telepon // Email
 const Alamat = [

@@ -11,23 +11,22 @@ let alamat = document.querySelector(".alamat");
 let Nohp = document.querySelector(".noTlp");
 let email = document.querySelector(".email")
 
-console.log(Alamat[0].Indonesia[0].alamat)
 bahasa(Bahasa_Default, bhsInggrisPc, bhsInggrisHp, bhsIndonesiaPc, bhsIndonesiaHp);
 bhsInggrisPc.addEventListener("click", ()=>{
     bahasa("en-EN", bhsInggrisPc, bhsInggrisHp, bhsIndonesiaPc, bhsIndonesiaHp);
  })
  bhsInggrisHp.addEventListener("click", ()=>{
     bahasa("en-EN", bhsInggrisPc, bhsInggrisHp, bhsIndonesiaPc, bhsIndonesiaHp);
- })
+})
 
  bhsIndonesiaPc.addEventListener("click", ()=>{
      bahasa("id-ID", bhsInggrisPc, bhsInggrisHp, bhsIndonesiaPc, bhsIndonesiaHp);
- })
+    })
  bhsIndonesiaHp.addEventListener("click", ()=>{
      bahasa("id-ID", bhsInggrisPc, bhsInggrisHp, bhsIndonesiaPc, bhsIndonesiaHp);
- })
+    })
 function bahasa(b, ingpc, inghp, indpc, indhp){
-
+    // detect(b)
     if(b == "id-ID" || b == "Indonesia" || b == "Indonesia(id)"){
         indhp.style.color = "red";
         indpc.style.color = "red";
@@ -37,7 +36,6 @@ function bahasa(b, ingpc, inghp, indpc, indhp){
         NavbarAtass.innerHTML = ``;
         NavBawahh.innerHTML = ``;
         NavbarHP.innerHTML = ``;
-
 
 
         // jurusan
@@ -58,10 +56,13 @@ function bahasa(b, ingpc, inghp, indpc, indhp){
             NavbarAtass.innerHTML += `<li class="nav-item">
             <a class="nav-link isiNavKanan"  href="#">${NavbarAtas[0].Indonesia[navAtas].isi}</a>
           </li>`
+          NavbarHP.innerHTML += `<li class="nav-item">
+          <a class="nav-link" href="#">${NavbarAtas[0].Indonesia[navAtas].isi}</a>
+        </li>`
         }
         // Navbar Bawah
         for(let navBawah = 0; navBawah < NavbarBawah[0].Indonesia.length; navBawah++ ){
-            NavBawahh.innerHTML += `                      <li class="nav-item">
+            NavBawahh.innerHTML += `<li class="nav-item">
             <a class="nav-link btnn isiNavBesar" aria-current="page" href="#"><h6>${NavbarBawah[0].Indonesia[navBawah].isi}</h6></a>
           </li>`
           NavbarHP.innerHTML += `<li class="nav-item">
@@ -89,8 +90,6 @@ function bahasa(b, ingpc, inghp, indpc, indhp){
         NavbarHP.innerHTML = ``;
 
 
-
-
         // Jurusan
         for(let i = 0; i < Jurusan[1].Inggris.length; i++){
             console.log(i)
@@ -98,8 +97,8 @@ function bahasa(b, ingpc, inghp, indpc, indhp){
                 jurusan.innerHTML += `<li onclick="UrlKlik(event)" class="list-jurusan" id="${i}"><h1 id="${i}">${Jurusan[1].Inggris[i].nama}</h1></li>`
             }else{
                 jurusan.innerHTML += `<li onclick="UrlKlik(event)" class="list-jurusan" id="${i}"><h1 id="${i}">${Jurusan[1].Inggris[i].nama}</h1><p id="${i}">${Jurusan[1].Inggris[i].kepanjangan}</p></li>`
+
             }
-    
 
         }
         // Navbar
@@ -108,6 +107,9 @@ function bahasa(b, ingpc, inghp, indpc, indhp){
             NavbarAtass.innerHTML += `<li class="nav-item">
             <a class="nav-link isiNavKanan"  href="#">${NavbarAtas[1].Inggris[navAtas].isi}</a>
           </li>`
+          NavbarHP.innerHTML += `<li class="nav-item">
+          <a class="nav-link" href="#">${NavbarAtas[1].Inggris[navAtas].isi}</a>
+        </li>`
         }
         // Navbar Bawah
         for(let navBawah = 0; navBawah < NavbarBawah[1].Inggris.length; navBawah++ ){
@@ -124,26 +126,22 @@ function bahasa(b, ingpc, inghp, indpc, indhp){
         // No Hp & Email
         Nohp.innerHTML = Nomor_Hp;
         email.innerHTML = Email;
-    
-    
+
     }   
 
     
 }
+// function detect(opBhs){
+//     let bahs = opBhs;
+    
+// }
+
+// function UrlKlik(event){
+//     let id = event.target.id;
+//     Ket_Jurusan.style.display = "block"
 
 
-
-function UrlKlik(event){
-    let id = event.target.id;
-    if(Jurusan_href[id].href){
-
-        window.open(Jurusan_href[id].href)
-    } else{
-        
-    }
-}
-
-
+// }
 
 
 
@@ -215,9 +213,7 @@ setInterval(()=>{
 
 
 let muncul = document.querySelector(".iklan");
-setTimeout(()=>{
-    muncul.style.display = "inline"
-}, MuculSetelahBerapaDetik)
+
 
 function HilangkanIKlan(){
     muncul.style.display = "none"
@@ -270,8 +266,10 @@ if(GambarSaatLoading){
 
 
     window.addEventListener('load', function(){
-        
         loading.style.display = "none"
+        setTimeout(()=>{
+            muncul.style.display = "inline"
+        }, MuculSetelahBerapaDetik)
     
     });
 
@@ -299,3 +297,8 @@ for(let i = 0; i < Link.length; i++){
         }
     }
 
+// Keluar dari jurusan Keterangan
+let Ket_Jurusan = document.querySelector(".Ket_Jurusan");
+function Keluarr(){
+    Ket_Jurusan.style.display = "none";
+}

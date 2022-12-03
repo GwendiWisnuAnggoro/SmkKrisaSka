@@ -1,13 +1,83 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Secular+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
-/* .KetJurusan{
-    width: 30%;
-    height: 50%;
-    margin: auto;
-    background: blue;
-} */
-.Ket_Jurusan h1,p{
+
+.medsos{
+    height: 100%;
+    width: auto;
+    margin-left: 200px;
+    display: flex;
+    position: absolute;
+    display: none;
+
+}
+.medsos .fb:hover{
+    color: gray;
+}
+.medsos .ig:hover{
+    color: gray;
+}
+.medsos .yt:hover{
+    color: gray;
+}
+.medsos .fb{
+    margin-top: 150%;
+    color: gray;
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 30px;
+}
+.medsos .ig{
+    margin-top: 150%;
+    color: gray;
+    width: 30px;
+    height: 30px;
+}
+.medsos .yt{
+    margin-top: 150%;
+    color: gray;
+    width: 30px;
+    height: 30px;
+}
+.LinkPenutupKetJurusan:hover{
+    color: red;
+}
+.LinkPenutupKetJurusan{
+    margin-top: 3%;
+    margin-left: 20%;
+    text-decoration: none;
+    font-size: 20px;
+}
+.GmbrLogoPenutup{
+    height: 80%;
+    width: 100px;
+    margin-left: 15%;
+    margin-top: 1%;
+}
+.penutupKeteranganJurusan{
+    border: 1px solid black;
+    width: 100%;
+    margin-top: 100px;
+    height: 120px;
+    display: flex;
+    position: relative;
+}
+.pengertianS, .List_PengetahuanKeahlian, .List_AlasanMemilih, .IsiPeluangKerja{
+    margin-right: 15%;
+    margin-left: 15%;
+}
+.pengertianH, .PengetahuanDKeahlian, .AlasanMeilih, .PeluangKerja{
+    margin-left: 10%;
+    font-size: 20px;
+}
+.Header{
+    font-weight: bold;
+}
+.Ket_Jurusan .Kepanjangan_Nama_Jurusan{
+    font-size: 20px;
+}
+.Ket_Jurusan .Nama_Jurusan,.Kepanjangan_Nama_Jurusan{
     text-align: center;
     font-family: serif;
 }
@@ -30,9 +100,10 @@
     height: 100vh;
     position: fixed;
     background: white;
-    display: none;
+    display: block;
     z-index: 1000;
     overflow-y: auto;
+    display: none;
 }
 /*  */
 .nav-item .bahasa{
@@ -434,6 +505,111 @@ nav{
 
 /* HPr */
 @media screen and  (min-width: 300px) and (max-width: 576px){
+    
+    .medsos{
+        height: 100%;
+        width: auto;
+        margin-left: 200px;
+        display: flex;
+        position: absolute;
+
+    
+    }
+    .medsos .fb:hover{
+        color: gray;
+    }
+    .medsos .ig:hover{
+        color: gray;
+    }
+    .medsos .yt:hover{
+        color: gray;
+    }
+    .medsos .fb{
+        margin-top: 150%;
+        color: gray;
+        width: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 30px;
+    }
+    .medsos .ig{
+        margin-top: 150%;
+        color: gray;
+        width: 30px;
+        height: 30px;
+    }
+    .medsos .yt{
+        margin-top: 150%;
+        color: gray;
+        width: 30px;
+        height: 30px;
+    }
+    .LinkPenutupKetJurusan:hover{
+        color: red;
+    }
+    .LinkPenutupKetJurusan{
+        margin-top: 3%;
+        margin-left: 20%;
+        text-decoration: none;
+        font-size: 15px;
+    }
+    .GmbrLogoPenutup{
+        height: 80%;
+        width: 100px;
+        margin-left: 15%;
+        margin-top: 1%;
+    }
+    .penutupKeteranganJurusan{
+        border: 1px solid black;
+        width: 100%;
+        margin-top: 100px;
+        height: 120px;
+        display: flex;
+        position: relative;
+    }
+    .pengertianS, .List_PengetahuanKeahlian, .List_AlasanMemilih, .IsiPeluangKerja{
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+    .pengertianH, .PengetahuanDKeahlian, .AlasanMeilih, .PeluangKerja{
+        margin-left: 10%;
+        font-size: 20px;
+    }
+    .Header{
+        font-weight: bold;
+    }
+    .Ket_Jurusan .Kepanjangan_Nama_Jurusan{
+        font-size: 20px;
+    }
+    .Ket_Jurusan .Nama_Jurusan,.Kepanjangan_Nama_Jurusan{
+        text-align: center;
+        font-family: serif;
+    }
+    .Ket_Jurusan .keluarDariJurusan{
+        width: 30px;
+        height: 30px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .Ket_Jurusan svg{
+        width: 100%;
+        color: black;
+        height: 100%;
+    }
+    .Ket_Jurusan svg:hover{
+        color: red;
+    }
+    .Ket_Jurusan{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        background: white;
+        display: block;
+        z-index: 1000;
+        overflow-y: auto;
+        display: none;
+    }
+    /*  */
     .loading{
         width: 100%;
         margin-top: 0%;
@@ -1245,6 +1421,111 @@ nav{
 
 /* PC */
 @media screen and (min-width: 992px){
+    
+.medsos{
+    height: 100%;
+    width: auto;
+    margin-left: 200px;
+    display: flex;
+    position: absolute;
+    display: none;
+
+}
+.medsos .fb:hover{
+    color: gray;
+}
+.medsos .ig:hover{
+    color: gray;
+}
+.medsos .yt:hover{
+    color: gray;
+}
+.medsos .fb{
+    margin-top: 150%;
+    color: gray;
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 30px;
+}
+.medsos .ig{
+    margin-top: 150%;
+    color: gray;
+    width: 30px;
+    height: 30px;
+}
+.medsos .yt{
+    margin-top: 150%;
+    color: gray;
+    width: 30px;
+    height: 30px;
+}
+.LinkPenutupKetJurusan:hover{
+    color: red;
+}
+.LinkPenutupKetJurusan{
+    margin-top: 3%;
+    margin-left: 20%;
+    text-decoration: none;
+    font-size: 20px;
+}
+.GmbrLogoPenutup{
+    height: 80%;
+    width: 100px;
+    margin-left: 15%;
+    margin-top: 1%;
+}
+.penutupKeteranganJurusan{
+    border: 1px solid black;
+    width: 100%;
+    margin-top: 100px;
+    height: 120px;
+    display: flex;
+    position: relative;
+}
+.pengertianS, .List_PengetahuanKeahlian, .List_AlasanMemilih, .IsiPeluangKerja{
+    margin-right: 15%;
+    margin-left: 15%;
+}
+.pengertianH, .PengetahuanDKeahlian, .AlasanMeilih, .PeluangKerja{
+    margin-left: 10%;
+    font-size: 20px;
+}
+.Header{
+    font-weight: bold;
+}
+.Ket_Jurusan .Kepanjangan_Nama_Jurusan{
+    font-size: 20px;
+}
+.Ket_Jurusan .Nama_Jurusan,.Kepanjangan_Nama_Jurusan{
+    text-align: center;
+    font-family: serif;
+}
+.Ket_Jurusan .keluarDariJurusan{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.Ket_Jurusan svg{
+    width: 100%;
+    color: black;
+    height: 100%;
+}
+.Ket_Jurusan svg:hover{
+    color: red;
+}
+.Ket_Jurusan{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: white;
+    display: block;
+    z-index: 1000;
+    overflow-y: auto;
+    display: none;
+}
+    /*  */
     .loading{
         width: 100%;
         margin-top: 0%;

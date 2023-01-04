@@ -25,9 +25,8 @@ let AlasanMeilih = document.querySelector(".AlasanMeilih");
 let peluangKerja = document.querySelector(".PeluangKerja");
 let PengetahuanDKeahlian = document.querySelector(".PengetahuanDKeahlian")
 let PengertianH = document.querySelector(".pengertianH")
-// let bhss = Bahasa_Default;
 let warnaJurusan = document.querySelector(".penutupKeteranganJurusan")
-let pengertianS = document.querySelector(".pengertianS")
+let pengertianS = document.querySelector(".pengertianS");
 document.getElementById("cssHover").innerHTML = ``
 bahasa(Bahasa_Default, bhsInggrisPc, bhsInggrisHp, bhsIndonesiaPc, bhsIndonesiaHp);
 bhsInggrisPc.addEventListener("click", ()=>{
@@ -44,7 +43,6 @@ bhsInggrisPc.addEventListener("click", ()=>{
      bahasa("id-ID", bhsInggrisPc, bhsInggrisHp, bhsIndonesiaPc, bhsIndonesiaHp);
     })
 function bahasa(b, ingpc, inghp, indpc, indhp){
-    // bhss = b;
     if(b == "id-ID" || b == "Indonesia" || b == "Indonesia(id)"){
         indhp.style.color = "red";
         indpc.style.color = "red";
@@ -89,7 +87,6 @@ function bahasa(b, ingpc, inghp, indpc, indhp){
                         if(Jurusan_Keterangan_Isi[0].Indonesia[id].isi_Pengetahuan_dan_Keahlian[0].list[i]){
                             l_PengetahuanKahlian.innerHTML += `<li>${Jurusan_Keterangan_Isi[0].Indonesia[id].isi_Pengetahuan_dan_Keahlian[0].list[i]}</li>`
                         } else{
-                            // l_PengetahuanKahlian.innerHTML += ``
     
                         }
                     }
@@ -98,7 +95,6 @@ function bahasa(b, ingpc, inghp, indpc, indhp){
                         if(Jurusan_Keterangan_Isi[0].Indonesia[id].isi_AlasanMemilihJurusan[0].list[i]){
                             l_alasanMemilih.innerHTML += `<li>${Jurusan_Keterangan_Isi[0].Indonesia[id].isi_AlasanMemilihJurusan[0].list[i]}</li>`
                         } else{
-                            // l_PengetahuanKahlian.innerHTML += ``
     
                         }
                     }
@@ -120,7 +116,6 @@ function bahasa(b, ingpc, inghp, indpc, indhp){
                 
             
             })
-            // Navbar
         }
         
         // Navbar atas
@@ -268,76 +263,10 @@ function BUka(){
     Ket_Jurusan.style.display = "block";
 }
 
-// function detect(opBhs){
-//     let bahs = opBhs;
-    
-// }
-// alert(bhss)
-// function {
-//     let id = event.target.id;
-//     Ket_Jurusan.style.display = "block";
-//     if(Bahasa_Default == "id-ID" || Bahasa_Default == "Indonesia" || Bahasa_Default == "Indonesia(id)" ){
-//         // alert("indonesia")
-//     } else if (Bahasa_Default == "en-EN" || Bahasa_Default == "Inggris" || Bahasa_Default == "Inggris(en)"){
-//         // alert("Inggris")
-//     }
-//  Nama_Jurusan.innerText = `${Jurusan[0].Indonesia[id].nama}`
-
-// }
-
-// function Misal(a, b){
-//     console.log("a "+a);
-//     console.log("b "+b)
-// }
-// Misal( event , 10)
-
-//Sistem Cari
-// let Keywoard = document.getElementById("cari");
-// Keywoard.addEventListener("keyup", SistemCari_Mapel)
-
-//     function SistemCari_Mapel(e){
-//         let Keywoard = e.target.value.toLowerCase();
-//         let isiMapel = document.querySelectorAll(".list-jurusan");
-
-//         isiMapel.forEach((item)=>{
-//             let hasilMapel = item.childNodes[0].textContent.toLowerCase();
-
-//             if(hasilMapel.indexOf(Keywoard) != -1){
-//                 item.setAttribute("style","display: block;");
-//             } else if(hasilMapel.indexOf(Keywoard) == -1){
-//                 item.setAttribute("style","display: none !important;");
-//             }
-//         });
-        
-//     }
-
-
-// Default
 
 IMGShow.innerHTML = `<div class="IMG-SlideShow">
            <img src="img/${listGambar[index].src}" alt="">
         </div>`
-        // Ketikka sudah gamabar terakhir
-
-// indicator
-
-// let indicator = document.querySelector(".indikator");
-// for(let i = 0; i < listGambar.length; i++){
-        // indicator.innerHTML += `<div  class="kotak">
-        // <svg xmlns="http://www.w3.org/2000/svg" onclick="squere(event)" id="${i}" width="25" height="25" fill="currentColor" class="bi bi-square" viewBox="0 0 16 16">
-        // <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-        // </svg></div>`
-                // console.log("Musik Index ke:"+i+","+ listGambar[i].src)
-    // function squere(event){
-    //         let id = event.target.id;
-    //         index = id;
-    //         IMGShow.innerHTML = `<div class="IMG-SlideShow">
-    //         <img src="img/${listGambar[index].src}"  alt="">
-    //         </div>`
-    // }
-// }
-// let indikatorKOtak = document.querySelectorAll(".kotak");
-
 setInterval(()=>{
 
    if(index == listGambar.length-1){
@@ -345,11 +274,13 @@ setInterval(()=>{
               IMGShow.innerHTML = `<div class="IMG-SlideShow">
            <img src="img/${listGambar[index].src}"  alt="">
         </div>`
+       jalankanIndicator(index);
       } else{
                 index++;
                 IMGShow.innerHTML = `<div class="IMG-SlideShow">
            <img src="img/${listGambar[index].src}" alt="">
         </div>`
+       jalankanIndicator(index);
      }
 }, kecepatan_Berubah)
 
@@ -368,31 +299,38 @@ let skipKanan = document.getElementById("SKIPkanan")
 let skipKiri = document.getElementById("SKIPkiri")
 
 skipKanan.addEventListener("click", ()=>{
-    if(index < listGambar.length -1){
-        index += 1;
-        IMGShow.innerHTML = `<div class="IMG-SlideShow">
-        <img src="img/${listGambar[index].src}"  alt="">
-     </div>`
+     // Tambahkan 1 ke indeks gambar
+     index++;
 
-    }else if(index == listGambar.length -1 ){
-        index = 0;
-        IMGShow.innerHTML = `<div class="IMG-SlideShow">
-        <img src="img/${listGambar[index].src}"  alt="">
-     </div>`
-      
-    }
+     // Jika indeks melebihi jumlah gambar, kembali ke indeks pertama
+     if (index >= listGambar.length) {
+         index = 0;
+     }
+ 
+     // Ganti source gambar yang ditampilkan
+     IMGShow.innerHTML = `<div class="IMG-SlideShow">
+         <img src="img/${listGambar[index].src}"  alt="">
+      </div>`
+      jalankanIndicator(index)
 })
 
 
 
 skipKiri.addEventListener("click", ()=>{
-    if(index <= listGambar.length -1){
-        index -= 1;
-        IMGShow.innerHTML = `<div class="IMG-SlideShow">
+     // Kurangi 1 dari indeks gambar
+     index--;
+
+     // Jika indeks kurang dari 0, kembali ke indeks terakhir
+     if (index < 0) {
+         index = listGambar.length - 1;
+     }
+ 
+     // Ganti source gambar yang ditampilkan
+     IMGShow.innerHTML = `<div class="IMG-SlideShow">
         <img src="img/${listGambar[index].src}"  alt="">
      </div>`
-
-    }
+     jalankanIndicator(index)
+     
 })
 
 
@@ -444,3 +382,66 @@ for(let i = 0; i < Link.length; i++){
 function Keluarr(){
     Ket_Jurusan.style.display = "none";
 }
+
+
+
+
+// Indicator
+
+// Sistem Indicator
+function IndicatorSistem(){
+    let indicatorSemua = document.querySelectorAll(".KotakIndicator");
+    for(let i = 0; i < indicatorSemua.length; i++){
+        indicatorSemua[i].addEventListener("click", (event)=>{
+            let id = event.target.id;
+            index = id;
+            IMGShow.innerHTML = `<div class="IMG-SlideShow">
+                <img src="img/${listGambar[index].src}"  alt="">
+            </div>`
+            jalankanIndicator(index);
+        })
+    }
+}
+const Indicator = ()=>{
+    for(let i = 0; i<listGambar.length; i++){
+        
+        const bungkusIndicator = document.querySelector(".indikatorGambar");
+        bungkusIndicator.innerHTML += `<div class="KotakIndicator" id="${i}"></div>`
+    }
+}
+function jalankanIndicator(i){
+    let o = i;
+    let indicatorActive = document.querySelectorAll(".KotakIndicator");
+    for(let i = 0; i < listGambar.length; i++){
+        indicatorActive[i].style.background = Warna_indikator_TidakAktif;
+        indicatorActive[i].addEventListener("mouseover", ()=>{
+            indicatorActive[i].style.background = Warna_Hover;
+        })
+        indicatorActive[i].addEventListener("mouseout", ()=>{
+            indicatorActive[i].style.background = Warna_indikator_TidakAktif;
+        })
+        
+        
+    }
+    
+    indicatorActive[o].addEventListener("mouseover", ()=>{
+        indicatorActive[o].style.background = Warna_indikator_Aktif;
+    })
+    indicatorActive[o].style.background = Warna_indikator_Aktif;
+    indicatorActive[o].addEventListener("mouseout", ()=>{
+        indicatorActive[o].style.background = Warna_indikator_Aktif;
+    })
+           
+
+        
+}
+    
+function JalankanSemuaFunctionIndicator(){
+    Indicator();
+    IndicatorSistem();
+    jalankanIndicator(0);
+
+    
+
+}
+JalankanSemuaFunctionIndicator();

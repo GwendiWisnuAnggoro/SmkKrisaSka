@@ -1,6 +1,3 @@
-
-
-
 // Bahasa Default
 // Cara Penulisan:
 //- Indonesia(id) atau Indonesia atau id-ID
@@ -57,6 +54,7 @@ const NavbarAtas = [
     }
 
 ]
+
 // Navbar Bawah
 const NavbarBawah = [
     {
@@ -96,7 +94,6 @@ const NavbarBawah = [
 
 
 
-
 // Slide Show
 // Gambar di slide show
 const listGambar = 
@@ -132,7 +129,13 @@ const kecepatan_Berubah = 4000;
 
 // Gambar Iklan
 const MuculSetelahBerapaDetik = 2000;
+// Warna Indikator
+const Warna_indikator_TidakAktif = "white";
+const Warna_indikator_Aktif = "blue";
+const Warna_Hover = "red";
 
+
+// 
 // Jurusan
 const Jurusan = 
 [
